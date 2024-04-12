@@ -3,7 +3,12 @@ import { useState } from 'react';
 function Square({ value, onSquareClick }) {
   return (
     <button className="square" onClick={onSquareClick}>
-      {value}
+      {value === "X" &&
+        <img src={"https://img.pokemondb.net/sprites/ruby-sapphire/normal/pikachu.png"} width={"32px"} />
+      }
+      {value === "O" &&
+        <img src={"https://img.pokemondb.net/sprites/ruby-sapphire/normal/charizard.png"} width={"32px"} />
+      }
     </button>
   );
 }
